@@ -49,5 +49,7 @@ public class ExpenseService {
         );
     }
 
-    public void deleteExpense() {}
+    public void deleteExpense(String id) {
+        expenseRepository.deleteById(id);
+    }
 }
