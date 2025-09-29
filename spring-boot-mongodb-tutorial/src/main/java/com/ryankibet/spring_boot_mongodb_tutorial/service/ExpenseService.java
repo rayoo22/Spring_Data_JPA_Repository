@@ -22,7 +22,7 @@ public class ExpenseService {
     }
 
     public void updateExpense(Expense expense) {
-        // we first find the expense we are looking for, the update it
+        // we first find the expense we are looking for, then update it
         // else if not found it throws an error
         Expense savedExpense = expenseRepository.findById(expense.getId())
                 .orElseThrow(() -> new RuntimeException(
